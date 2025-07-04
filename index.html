@@ -178,12 +178,13 @@
     </div>
   </footer>
 
-  <script>
-    // Form submission to Zapier
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById('contact-form');
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Zapier contact form submission
+    const form = document.getElementById('contact-form');
 
-      form.addEventListener('submit', function(e) {
+    if (form) {
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const data = {
@@ -210,7 +211,7 @@
           alert('There was an error sending your message.');
         });
       });
-    });
+    }
 
     // GSAP animations
     gsap.registerPlugin(ScrollTrigger);
@@ -255,6 +256,7 @@
         }
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
