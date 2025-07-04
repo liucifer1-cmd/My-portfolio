@@ -38,3 +38,33 @@ gsap.utils.toArray(".zoom-in").forEach((element, i) => {
     }
   });
 });
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  fetch('hhttps://hooks.zapier.com/hooks/catch/23652477/u34rdfl/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  })
+  .then(response => {
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+    } else {
+      alert('There was a problem. Please try again.');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Something went wrong!');
+  });
+});
+</script>
