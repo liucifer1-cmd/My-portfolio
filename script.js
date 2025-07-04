@@ -39,17 +39,18 @@ gsap.utils.toArray(".zoom-in").forEach((element, i) => {
   });
 });
 <script>
-document.getElementById('contact-form').addEventListener('submit', function (e) {
+document.getElementById('contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const form = e.target;
+
   const data = {
     name: form.name.value,
     email: form.email.value,
     message: form.message.value
   };
 
-  fetch('hhttps://hooks.zapier.com/hooks/catch/23652477/u34rdfl/', {
+  fetch('https://hooks.zapier.com/hooks/catch/23652477/u34rdfl/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -59,12 +60,12 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
       form.style.display = 'none';
       document.getElementById('thank-you').style.display = 'block';
     } else {
-      alert('There was a problem. Please try again.');
+      alert('Oops! Something went wrong. Try again.');
     }
   })
   .catch(error => {
     console.error('Error:', error);
-    alert('Something went wrong!');
+    alert('There was an error sending your message.');
   });
 });
 </script>
