@@ -6,7 +6,7 @@ gsap.utils.toArray(".fade-in").forEach((element) => {
     scrollTrigger: {
       trigger: element,
       start: "top 80%",
-      toggleActions: "play none none reverse"
+      toggleActions: "play none none none"
     }
   });
 });
@@ -20,7 +20,7 @@ gsap.utils.toArray(".slide-up").forEach((element, i) => {
     scrollTrigger: {
       trigger: element,
       start: "top 80%",
-      toggleActions: "play none none reverse"
+      toggleActions: "play none none none"
     }
   });
 });
@@ -34,7 +34,7 @@ gsap.utils.toArray(".zoom-in").forEach((element, i) => {
     scrollTrigger: {
       trigger: element,
       start: "top 80%",
-      toggleActions: "play none none reverse"
+      toggleActions: "play none none none"
     }
   });
 });
