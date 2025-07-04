@@ -159,23 +159,36 @@ section:not(:first-of-type)::before {
 .skills h2 {
   text-align: center;
   color: #ffffff;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-list-container {
+  overflow-x: auto;
+  padding: 1rem 0;
+  display: block;
 }
 
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  display: flex;
   gap: 1rem;
-  margin-bottom: 4rem;
+  min-width: max-content;
+  padding: 0.5rem 0;
 }
 
 .skill-card {
   background-color: #2a2a2a;
-  padding: 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
-  text-align: center;
   color: #ffffff;
   font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  background-color: #00ffcc;
+  color: #121212;
 }
 
 /* Resume */
