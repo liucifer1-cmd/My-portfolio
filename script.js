@@ -1,3 +1,7 @@
+// Register ScrollTrigger plugin for GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Fade-in animation
 gsap.utils.toArray(".fade-in").forEach((element) => {
   gsap.from(element, {
     opacity: 0,
@@ -11,6 +15,7 @@ gsap.utils.toArray(".fade-in").forEach((element) => {
   });
 });
 
+// Slide-up animation
 gsap.utils.toArray(".slide-up").forEach((element, i) => {
   gsap.from(element, {
     opacity: 0,
@@ -25,6 +30,7 @@ gsap.utils.toArray(".slide-up").forEach((element, i) => {
   });
 });
 
+// Zoom-in animation
 gsap.utils.toArray(".zoom-in").forEach((element, i) => {
   gsap.from(element, {
     scale: 0.8,
@@ -38,34 +44,41 @@ gsap.utils.toArray(".zoom-in").forEach((element, i) => {
     }
   });
 });
-<script>
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
 
-  const form = e.target;
+// Zapier contact form submission handler
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById('contact-form');
 
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value
-  };
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  fetch('https://hooks.zapier.com/hooks/catch/23652477/u34rdfl/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(response => {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('thank-you').style.display = 'block';
-    } else {
-      alert('Oops! Something went wrong. Try again.');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('There was an error sending your message.');
-  });
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      console.log("Sending data to Zapier:", data);
+
+      fetch('https://hooks.zapier.com/hooks/catch/23652477/u34rdfl/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          alert('Oops! Something went wrong. Please try again.');
+          console.error("Zapier response error:", response);
+        }
+      })
+      .catch(error => {
+        console.error('Error sending message:', error);
+        alert('There was an error sending your message. Please try again later.');
+      });
+    });
+  }
 });
-</script>
