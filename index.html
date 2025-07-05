@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>William Liu | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -28,7 +28,7 @@
     <p>Administrative & Marketing Assistant | Dental Support | Digital Marketer</p>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="about fade-in">
     <div class="about-text slide-up delay-1">
       <h2>About Me</h2>
@@ -36,23 +36,24 @@
     </div>
   </section>
 
- <!-- Projects Section -->
-<section id="projects" class="projects fade-in">
-  <h2>Featured Work</h2>
-  <div class="project-grid">
-    <div class="project-card zoom-in">
-      <h3>Social Media Growth Strategy</h3>
-      <p>Led Instagram, Facebook, and LinkedIn campaigns that increased followers by 50% and engagement by 30% at Parklane Dental.</p>
+  <!-- Projects -->
+  <section id="projects" class="projects fade-in">
+    <h2>Featured Work</h2>
+    <div class="project-grid">
+      <div class="project-card zoom-in">
+        <img src="projects/project1.jpg" alt="Marketing Campaign" />
+        <h3>Social Media Growth Strategy</h3>
+        <p>Led Instagram, Facebook, and LinkedIn campaigns that increased followers by 50% and engagement by 30% at Parklane Dental.</p>
+      </div>
+      <div class="project-card zoom-in delay-1">
+        <img src="projects/project2.jpg" alt="SEO Optimization" />
+        <h3>SEO & Website Traffic Boost</h3>
+        <p>Improved SEO strategies resulting in a 60% increase in click-through rates and higher conversion rates for Brian Y. Kuo DDS Corp.</p>
+      </div>
     </div>
-    <div class="project-card zoom-in delay-1">
-      <h3>SEO & Website Traffic Boost</h3>
-      <p>Improved SEO strategies resulting in a 60% increase in click-through rates and higher conversion rates for Brian Y. Kuo DDS Corp.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Skills Section -->
+  <!-- Skills -->
   <section id="skills" class="skills fade-in">
     <h2>Skills & Tools</h2>
     <div class="skills-list-container">
@@ -75,11 +76,9 @@
     </div>
   </section>
 
-  <!-- Resume Section -->
+  <!-- Resume -->
   <section id="resume" class="resume-section fade-in">
     <h2>Resume</h2>
-
-    <!-- Education -->
     <div class="resume-category slide-up">
       <h3>Education</h3>
       <div class="resume-item">
@@ -87,8 +86,6 @@
         Associate of Science in Business Administration
       </div>
     </div>
-
-    <!-- Work Experience -->
     <div class="resume-category slide-up delay-1">
       <h3>Work Experience</h3>
       <div class="resume-item">
@@ -101,7 +98,6 @@
           <li>Maintained records for 20,000+ clients with 100% accuracy and HIPAA compliance.</li>
         </ul>
       </div>
-
       <div class="resume-item">
         <strong>Brian Y. Kuo DDS Corp.</strong> – Arcadia, CA<br>
         <em>Dental Assistant | May 2024 – Present</em>
@@ -113,8 +109,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- Projects -->
     <div class="resume-category slide-up delay-2">
       <h3>Project Experience</h3>
       <div class="resume-item">
@@ -134,34 +128,28 @@
         </ul>
       </div>
     </div>
-
-    <!-- Resume Skills -->
     <div class="resume-category slide-up delay-3">
       <h3>Skills & Tools</h3>
       <p>
         Microsoft Office, Dentrix, Patterson Eaglesoft, SEO Optimization, Google Analytics, AI tools, First Aid, Customer Service, Collaboration, Conflict Resolution, Time Management, Multitasking, Adaptability, Problem Solving, Sales Techniques
       </p>
     </div>
-
     <div class="text-center fade-in delay-4">
       <a href="assets/resume.pdf" download class="btn">Download My Resume</a>
     </div>
   </section>
 
-  <!-- Contact Section -->
-<section id="contact" class="contact fade-in">
-  <h2>Contact Me</h2>
-
-<form action="https://formsubmit.co/l.william1005@gmail.com" method="POST" class="contact-form">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
-
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit" class="btn">Send Message</button>
-</form>
-
+  <!-- Contact Form with Formspree -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/meokwklg" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer class="fade-in">
