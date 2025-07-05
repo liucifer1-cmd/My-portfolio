@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>William Liu | Portfolio</title>
   <meta name="description" content="Helping dental practices grow with marketing, tech, and admin excellence.">
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
-<body data-theme="light">
-  <!-- Loader & Floating Buttons -->
-  <div id="loader"><div class="spinner"></div></div>
-  <button id="theme-toggle" title="Toggle light/dark">🌙</button>
-  <button id="back-to-top" title="Back to top">↑</button>
+<body>
 
-  <!-- Mobile Navbar Toggle -->
-  <input type="checkbox" id="menu-toggle" hidden>
-  <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+
+  <!-- Scroll to Top Button -->
+  <button id="back-to-top" title="Back to top">↑</button>
 
   <!-- Navbar -->
   <nav class="navbar">
@@ -40,112 +37,128 @@
     <a href="#about" class="btn">Learn More ↓</a>
   </header>
 
-  <main>
-    <!-- About -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m a highly organized and results-driven professional with expertise in administrative support, dental operations, and digital marketing. I streamline workflows, enhance team efficiency, and drive brand growth through strategic initiatives.</p>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a highly organized and results-driven professional with expertise in administrative support, dental operations, and digital marketing. I streamline workflows, enhance team efficiency, and drive brand growth through strategic and creative initiatives.</p>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Featured Work</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="projects/project1.webp" alt="Social media campaign">
-          <h3>Social Media Growth Strategy</h3>
-          <p>Increased followers +50% and engagement +30% at Parklane Dental.</p>
-          <a href="#" class="btn">View Campaign</a>
-        </div>
-        <div class="project-card">
-          <img src="projects/project2.webp" alt="SEO project">
-          <h3>SEO & Website Traffic Boost</h3>
-          <p>Achieved +60% CTR and higher conversions for Brian Y. Kuo DDS Corp.</p>
-          <a href="#" class="btn">See Results</a>
-        </div>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Work</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="projects/project1.webp" alt="Social media campaign" loading="lazy" />
+        <h3>Social Media Growth Strategy</h3>
+        <p>Increased followers +50% and engagement +30% via Instagram, Facebook, and LinkedIn at Parklane Dental.</p>
       </div>
-    </section>
+      <div class="project-card">
+        <img src="projects/project2.webp" alt="SEO project" loading="lazy" />
+        <h3>SEO & Website Traffic Boost</h3>
+        <p>Achieved +60% CTR and higher conversions with SEO improvements for Brian Y. Kuo DDS Corp.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills & Tools</h2>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills-list-container">
       <div class="skills-list">
-        <div>Microsoft Office</div><div>Dentrix</div><div>Patterson Eaglesoft</div><div>Google Analytics</div>
-        <div>SEO Optimization</div><div>AI Tools</div><div>Customer Service</div><div>Team Collaboration</div>
-        <div>Conflict Resolution</div><div>Time Management</div><div>Multitasking</div><div>Adaptability</div>
-        <div>Problem Solving</div><div>Sales Techniques</div>
+        <div class="skill-card">Microsoft Office</div>
+        <div class="skill-card">Dentrix</div>
+        <div class="skill-card">Patterson Eaglesoft</div>
+        <div class="skill-card">Google Analytics</div>
+        <div class="skill-card">SEO Optimization</div>
+        <div class="skill-card">AI Tools</div>
+        <div class="skill-card">Customer Service</div>
+        <div class="skill-card">Team Collaboration</div>
+        <div class="skill-card">Conflict Resolution</div>
+        <div class="skill-card">Time Management</div>
+        <div class="skill-card">Multitasking</div>
+        <div class="skill-card">Adaptability</div>
+        <div class="skill-card">Problem Solving</div>
+        <div class="skill-card">Sales Techniques</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Resume -->
-    <section id="resume">
-      <h2>Resume</h2>
-      <div class="resume-category">
-        <h3>🎓 Education</h3>
-        <div class="resume-item">
-          <strong>Pasadena City College</strong>
-          <em>Associate of Science in Business Administration</em>
-        </div>
-      </div>
-      <div class="resume-category">
-        <h3>💼 Work Experience</h3>
-        <div class="resume-item">
-          <strong>Parklane Dental</strong>
-          <em>Admin & Marketing Assistant | Apr 2025 – Present</em>
-          <ul>
-            <li>Streamlined workflows, increased team efficiency by 20%</li>
-            <li>Boosted social engagement +50% / +30%</li>
-            <li>Maintained HIPAA‑compliant client records</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <strong>Brian Y. Kuo DDS Corp.</strong>
-          <em>Dental Assistant | May 2024 – Present</em>
-          <ul>
-            <li>Improved sterilization +20%, throughput +20%</li>
-            <li>Produced video content boosting engagement +60%</li>
-            <li>Reduced patient wait times by 30%</li>
-          </ul>
-        </div>
-      </div>
-      <div class="resume-category">
-        <h3>📁 Projects</h3>
-        <div class="resume-item">
-          <strong>Email Campaign & AI Tools</strong>
-          <ul>
-            <li>Raised email open rate +22%, revenue +15%</li>
-            <li>Implemented AI/PM tools, increasing team efficiency +35%</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <strong>SEO Content Strategy</strong>
-          <ul>
-            <li>Boosted engagement +35%, CTR +60% in 3 months</li>
-          </ul>
-        </div>
-      </div>
-      <a href="assets/resume.pdf" download class="btn">Download Resume</a>
-    </section>
+  <!-- Resume -->
+  <section id="resume">
+    <h2>Resume</h2>
 
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form action="https://formsubmit.co/meokwklg" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </section>
-  </main>
+    <div class="resume-category">
+      <h3>🎓 Education</h3>
+      <div class="resume-item">
+        <strong>Pasadena City College</strong>
+        <em>Associate of Science in Business Administration</em>
+      </div>
+    </div>
 
+    <div class="resume-category">
+      <h3>💼 Work Experience</h3>
+      <div class="resume-item">
+        <strong>Parklane Dental</strong>
+        <em>Admin & Marketing Assistant | Apr 2025–Present</em>
+        <ul>
+          <li>Streamlined workflows, reduced processing time by 20%.</li>
+          <li>Social media +50% followers, +30% engagement.</li>
+          <li>Maintained HIPAA‑compliant records for 20,000+ clients.</li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <strong>Brian Y. Kuo DDS Corp.</strong>
+        <em>Dental Assistant | May 2024–Present</em>
+        <ul>
+          <li>Improved sterilization and throughput by 20%.</li>
+          <li>Video content boosted engagement by 60%.</li>
+          <li>Reduced wait times by 30% and increased satisfaction.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="resume-category">
+      <h3>📁 Projects</h3>
+      <div class="resume-item">
+        <strong>Email Campaign & AI Tools</strong>
+        <ul>
+          <li>+22% open rate, +15% revenue from email strategy.</li>
+          <li>Integrated AI and PM tools to boost efficiency by 35%.</li>
+        </ul>
+      </div>
+      <div class="resume-item">
+        <strong>SEO Content</strong>
+        <ul>
+          <li>+60% CTR and +35% engagement via strategic content.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="assets/resume.pdf" class="btn" download>Download My Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/meokwklg" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>Follow me:</p>
     <div class="social-links">
-      <a href="https://linkedin.com/in/william-liu-7088a02a2" target="_blank">LinkedIn</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
       <a href="mailto:l.william1005@gmail.com">Email</a>
     </div>
   </footer>
+
 </body>
 </html>
