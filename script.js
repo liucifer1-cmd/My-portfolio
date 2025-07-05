@@ -11,6 +11,24 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent = nextTheme === "light" ? "🌙" : "☀️";
 });
 
+// === Typing effect on load ===
+window.addEventListener("DOMContentLoaded", () => {
+  const text = "Helping dental practices grow with marketing, tech, and admin excellence.";
+  const element = document.getElementById("typed-text");
+  let index = 0;
+
+  function typeChar() {
+    if (index < text.length) {
+      element.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeChar, 30); // Adjust typing speed here
+    }
+  }
+
+  typeChar();
+});
+
+
 // === SCROLL TO TOP BUTTON ===
 const scrollBtn = document.getElementById("back-to-top");
 
