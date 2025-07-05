@@ -149,18 +149,20 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact fade-in">
-    <h2>Contact Me</h2>
-    <form id="contact-form" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <div id="thank-you" style="display: none; text-align: center; margin-top: 2rem;" aria-live="polite">
-      <h2>Thank you! Your message has been sent.</h2>
-    </div>
-  </section>
+<section id="contact" class="contact fade-in">
+  <h2>Contact Me</h2>
+
+  <form action="https://formsubmit.co/L.william1005@gmail.com" method="POST" class="contact-form">
+    <!-- Prevent spam bots -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
 
   <!-- Footer -->
   <footer class="fade-in">
