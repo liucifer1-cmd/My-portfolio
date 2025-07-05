@@ -2,13 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Loader fadeout
   const loader = document.getElementById("loader");
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      loader.style.opacity = 0;
-      setTimeout(() => loader.remove(), 300);
-    }, 800);
+    setTimeout(() => { loader.style.opacity = 0; loader.remove(); }, 800);
   });
 
-  // Back to top button
+  // Back-to-top button
   const backBtn = document.getElementById("back-to-top");
   window.addEventListener("scroll", () => {
     backBtn.style.display = window.scrollY > 300 ? "block" : "none";
@@ -17,45 +14,40 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Smooth scrolling for nav links
+  // Smooth anchor scrolling
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", e => {
       e.preventDefault();
-      document.querySelector(link.getAttribute("href"))
-        .scrollIntoView({ behavior: "smooth" });
+      document.querySelector(link.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  // Typing animation for subtitle
+  // Typing effect
   const subtitle = document.querySelector(".subtitle");
   const text = subtitle.textContent;
   subtitle.textContent = "";
-  let idx = 0;
-  const typing = () => {
-    if (idx < text.length) {
-      subtitle.textContent += text[idx++];
-      setTimeout(typing, 50);
-    }
-  };
-  typing();
+  text.split("").forEach((char, i) => {
+    setTimeout(() => { subtitle.textContent += char; }, 50 * i);
+  });
 
-  // Dark/light theme toggle
+  // Theme toggle & preference
   const themeToggle = document.createElement("button");
   themeToggle.id = "theme-toggle";
   themeToggle.textContent = "🌙";
   document.body.appendChild(themeToggle);
+
   const setTheme = theme => {
     document.body.dataset.theme = theme;
-    localStorage.setItem("theme", theme);
     themeToggle.textContent = theme === "light" ? "🌙" : "☀️";
+    localStorage.setItem("theme", theme);
   };
-  const saved = localStorage.getItem("theme") || "light";
-  setTheme(saved);
+
+  setTheme(localStorage.getItem("theme") || "light");
   themeToggle.addEventListener("click", () => {
     setTheme(document.body.dataset.theme === "light" ? "dark" : "light");
   });
 
-  // GSAP animations (on load + scroll)
+  // GSAP on-load + scroll animations
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -70,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 0,
         y: 50,
         duration: 0.8,
-        delay: 0.2 + i * 0.05,
-        scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" }
+        delay: 0.3 + i * 0.05,
+        scrollTrigger: { trigger: el, start: "top 90%" }
       });
     });
   }
