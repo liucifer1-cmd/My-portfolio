@@ -143,13 +143,15 @@
   <section id="contact" class="contact fade-in">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/meokwklg" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </section>
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+  <!-- Redirect after success -->
+  <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
+
+  <button type="submit" class="btn">Send Message</button>
+</form>
 
   <!-- Footer -->
   <footer class="fade-in">
