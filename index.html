@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>William Liu | Portfolio</title>
+  <meta name="description" content="Helping dental practices grow with marketing, tech, and admin excellence.">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar fade-in">
+
+  <!-- Mobile Menu Toggle -->
+  <input type="checkbox" id="menu-toggle" hidden>
+  <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+
+  <!-- Navbar -->
+  <nav class="navbar">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
@@ -19,145 +26,93 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Header -->
-  <header class="fade-in">
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-bg"></div>
     <div class="profile-container">
-      <img src="assets/profile.jpg" alt="William Liu" class="profile-img slide-up"/>
+      <img src="assets/profile.jpg" alt="William Liu" class="profile-img">
     </div>
     <h1>William Liu</h1>
-    <p>Administrative & Marketing Assistant | Dental Support | Digital Marketer</p>
+    <p class="subtitle">Helping dental practices grow with marketing, tech, and admin excellence.</p>
+    <a href="#about" class="btn cta-btn">Learn More ↓</a>
   </header>
 
   <!-- About -->
-  <section id="about" class="about fade-in">
-    <div class="about-text slide-up delay-1">
-      <h2>About Me</h2>
-      <p>I am a highly organized and results-driven professional with a strong background in administrative support, dental operations, and digital marketing. I excel in dynamic, fast-paced environments where attention to detail, problem-solving, and process optimization are essential. My passion lies in streamlining workflows, enhancing team efficiency, and driving brand growth through strategic digital initiatives.</p>
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a highly organized and results-driven professional with expertise in administrative support, dental operations, and digital marketing in fast-paced environments. I streamline workflows, enhance team efficiency, and drive brand growth through strategic and creative initiatives.</p>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="projects fade-in">
+  <section id="projects">
     <h2>Featured Work</h2>
     <div class="project-grid">
-      <div class="project-card zoom-in">
+      <div class="project-card">
+        <img src="projects/project1.webp" alt="Social media campaign" loading="lazy">
         <h3>Social Media Growth Strategy</h3>
-        <p>Led Instagram, Facebook, and LinkedIn campaigns that increased followers by 50% and engagement by 30% at Parklane Dental.</p>
+        <p>Increased followers +50% and engagement +30% via Instagram, Facebook, and LinkedIn at Parklane Dental.</p>
+        <a href="#" class="btn">View Campaign</a>
       </div>
-      <div class="project-card zoom-in delay-1">
+      <div class="project-card">
+        <img src="projects/project2.webp" alt="SEO project" loading="lazy">
         <h3>SEO & Website Traffic Boost</h3>
-        <p>Improved SEO strategies resulting in a 60% increase in click-through rates and higher conversion rates for Brian Y. Kuo DDS Corp.</p>
+        <p>Achieved +60% CTR and higher conversions with SEO improvements for Brian Y. Kuo DDS Corp.</p>
+        <a href="#" class="btn">See Results</a>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="skills fade-in">
+  <section id="skills">
     <h2>Skills & Tools</h2>
-    <div class="skills-list-container">
-      <div class="skills-list">
-        <div class="skill-card zoom-in">Microsoft Office</div>
-        <div class="skill-card zoom-in delay-1">Dentrix</div>
-        <div class="skill-card zoom-in delay-2">Patterson Eaglesoft</div>
-        <div class="skill-card zoom-in delay-3">Google Analytics</div>
-        <div class="skill-card zoom-in delay-4">SEO Optimization</div>
-        <div class="skill-card zoom-in delay-5">AI-Powered Tools</div>
-        <div class="skill-card zoom-in delay-6">Customer Service</div>
-        <div class="skill-card zoom-in delay-7">Team Collaboration</div>
-        <div class="skill-card zoom-in delay-8">Conflict Resolution</div>
-        <div class="skill-card zoom-in delay-9">Time Management</div>
-        <div class="skill-card zoom-in delay-10">Multitasking</div>
-        <div class="skill-card zoom-in delay-11">Adaptability</div>
-        <div class="skill-card zoom-in delay-12">Problem Solving</div>
-        <div class="skill-card zoom-in delay-13">Sales & Upselling Techniques</div>
-      </div>
+    <div class="skills-list">
+      <div>Microsoft Office</div><div>Dentrix</div><div>Patterson Eaglesoft</div><div>Google Analytics</div>
+      <div>SEO Optimization</div><div>AI Tools</div><div>Customer Service</div><div>Team Collaboration</div>
+      <div>Conflict Resolution</div><div>Time Management</div><div>Multitasking</div><div>Adaptability</div>
+      <div>Problem Solving</div><div>Sales Techniques</div>
     </div>
   </section>
 
   <!-- Resume -->
-  <section id="resume" class="resume-section fade-in">
+  <section id="resume">
     <h2>Resume</h2>
-    <div class="resume-category slide-up">
-      <h3>Education</h3>
-      <div class="resume-item">
-        <strong>Pasadena City College</strong> – Pasadena, CA<br>
-        Associate of Science in Business Administration
-      </div>
+    <div>
+      <h3>🎓 Education</h3>
+      <p><strong>Pasadena City College</strong> – Associate of Science in Business Administration</p>
     </div>
-    <div class="resume-category slide-up delay-1">
-      <h3>Work Experience</h3>
-      <div class="resume-item">
-        <strong>Parklane Dental</strong> – Temple City, CA<br>
-        <em>Administrative & Marketing Assistant | Apr 2025 – Present</em>
-        <ul>
-          <li>Optimized administrative workflows by introducing digital filing and automated scheduling systems, reducing clerical processing time by 20%.</li>
-          <li>Managed social media platforms, increasing followers by 50% and boosting engagement by 30%.</li>
-          <li>Provided calendar management, client communications, and report preparation.</li>
-          <li>Maintained records for 20,000+ clients with 100% accuracy and HIPAA compliance.</li>
-        </ul>
-      </div>
-      <div class="resume-item">
-        <strong>Brian Y. Kuo DDS Corp.</strong> – Arcadia, CA<br>
-        <em>Dental Assistant | May 2024 – Present</em>
-        <ul>
-          <li>Streamlined sterilization processes, increasing patient throughput by 20% and reducing turnaround time by 15%.</li>
-          <li>Assisted in chairside procedures for over 150 patients monthly while ensuring OSHA/HEPA compliance.</li>
-          <li>Created video content that boosted engagement by 60%.</li>
-          <li>Improved appointment scheduling, cutting wait times by 30% and boosting satisfaction by 40%.</li>
-        </ul>
-      </div>
+    <div>
+      <h3>💼 Work Experience</h3>
+      <p><strong>Parklane Dental</strong> – Admin & Marketing Assistant (Apr 2025–Present): streamlined workflows, social media +50% / engagement +30%, HIPAA‑compliant client records.</p>
+      <p><strong>Brian Y. Kuo DDS Corp.</strong> – Dental Assistant (May 2024–Present): sterilization +20%, patient throughput +20%, created video content +60%, reduced wait times –30%.</p>
     </div>
-    <div class="resume-category slide-up delay-2">
-      <h3>Project Experience</h3>
-      <div class="resume-item">
-        <strong>Parklane Dental</strong><br>
-        <em>Email Campaign & AI Tools</em>
-        <ul>
-          <li>Led email marketing strategies with a 22% open rate increase and 15% revenue growth.</li>
-          <li>Implemented AI and project management tools, improving team efficiency by 35%.</li>
-        </ul>
-      </div>
-      <div class="resume-item">
-        <strong>Brian Y. Kuo DDS Corp.</strong><br>
-        <em>SEO Content & Website Traffic</em>
-        <ul>
-          <li>Created a content calendar boosting session duration and engagement by 35%.</li>
-          <li>SEO improvements raised click-through rates by 60% in 3 months.</li>
-        </ul>
-      </div>
+    <div>
+      <h3>📁 Projects</h3>
+      <p><strong>Email Campaign & AI Tools:</strong> +22% open rate and +15% revenue with email strategy, deployed AI & PM tools for 35% gain.</p>
+      <p><strong>SEO Content:</strong> +35% engagement, +60% CTR in 3 months through content calendar.</p>
     </div>
-    <div class="resume-category slide-up delay-3">
-      <h3>Skills & Tools</h3>
-      <p>
-        Microsoft Office, Dentrix, Patterson Eaglesoft, SEO Optimization, Google Analytics, AI tools, First Aid, Customer Service, Collaboration, Conflict Resolution, Time Management, Multitasking, Adaptability, Problem Solving, Sales Techniques
-      </p>
-    </div>
-    <div class="text-center fade-in delay-4">
-      <a href="assets/resume.pdf" download class="btn">Download My Resume</a>
-    </div>
+    <a href="assets/resume.pdf" download class="btn">Download Resume</a>
   </section>
 
-  <!-- Contact Form with Formspree -->
-  <section id="contact" class="contact fade-in">
+  <!-- Contact -->
+  <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/meokwklg" method="POST" class="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-  <!-- Redirect after success -->
-  <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
-
-  <button type="submit" class="btn">Send Message</button>
-</form>
+    <form action="https://formsubmit.co/meokwklg" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <input type="hidden" name="_next" value="https://william-liu.org/thank-you.html">
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
   <!-- Footer -->
-  <footer class="fade-in">
+  <footer>
     <p>Follow me:</p>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/william-liu-7088a02a2?utm_source=share&utm_campaign=share_via&utm_content=profile&" target="_blank">LinkedIn</a> |
-      <a href="mailto:L.william1005@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/william-liu-7088a02a2" target="_blank">LinkedIn</a>
+      <a href="mailto:l.william1005@gmail.com">Email</a>
     </div>
   </footer>
+
 </body>
 </html>
