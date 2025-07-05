@@ -60,16 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  gsap.utils.toArray(".project-card, .skill-card, .resume-item").forEach((el, i) => {
-    gsap.from(el, {
-      opacity: 0,
-      y: 50,
-      duration: 0.8,
-      delay: i * 0.1,
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-      }
-    });
+gsap.utils.toArray(".project-card, .skill-card, .resume-item").forEach(el => {
+  gsap.from(el, {
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: el,
+      start: "top 85%",
+    }
   });
 });
+
