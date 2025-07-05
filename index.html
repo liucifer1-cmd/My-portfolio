@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>William Liu | Portfolio</title>
   <meta name="description" content="Helping dental practices grow with marketing, tech, and admin excellence.">
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
 </head>
-<body>
-  <!-- Loader -->
+<body data-theme="light">
+  <!-- Loader & Floating Buttons -->
   <div id="loader"><div class="spinner"></div></div>
-
-  <!-- Back to top -->
+  <button id="theme-toggle" title="Toggle light/dark">🌙</button>
   <button id="back-to-top" title="Back to top">↑</button>
 
-  <!-- Mobile Menu Toggle -->
+  <!-- Mobile Navbar Toggle -->
   <input type="checkbox" id="menu-toggle" hidden>
   <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
 
@@ -33,11 +32,12 @@
 
   <!-- Hero -->
   <header class="hero">
-    <div class="hero-bg"></div>
-    <div class="profile-container"><img src="assets/profile.jpg" alt="William Liu" class="profile-img"></div>
+    <div class="profile-container">
+      <img src="assets/profile.jpg" alt="William Liu" class="profile-img" />
+    </div>
     <h1>William Liu</h1>
     <p class="subtitle">Helping dental practices grow with marketing, tech, and admin excellence.</p>
-    <a href="#about" class="btn cta-btn">Learn More ↓</a>
+    <a href="#about" class="btn">Learn More ↓</a>
   </header>
 
   <main>
@@ -52,13 +52,13 @@
       <h2>Featured Work</h2>
       <div class="project-grid">
         <div class="project-card">
-          <img src="projects/project1.webp" alt="Social media campaign" loading="lazy">
+          <img src="projects/project1.webp" alt="Social media campaign">
           <h3>Social Media Growth Strategy</h3>
           <p>Increased followers +50% and engagement +30% at Parklane Dental.</p>
           <a href="#" class="btn">View Campaign</a>
         </div>
         <div class="project-card">
-          <img src="projects/project2.webp" alt="SEO project" loading="lazy">
+          <img src="projects/project2.webp" alt="SEO project">
           <h3>SEO & Website Traffic Boost</h3>
           <p>Achieved +60% CTR and higher conversions for Brian Y. Kuo DDS Corp.</p>
           <a href="#" class="btn">See Results</a>
@@ -80,9 +80,50 @@
     <!-- Resume -->
     <section id="resume">
       <h2>Resume</h2>
-      <div><h3>🎓 Education</h3><p><strong>Pasadena City College</strong> – Associate of Science in Business Administration</p></div>
-      <div><h3>💼 Work Experience</h3><p><strong>Parklane Dental</strong> – Admin & Marketing Assistant (Apr 2025–Present): streamlined workflows, social media +50%, engagement +30%, HIPAA‑compliant operations.</p><p><strong>Brian Y. Kuo DDS Corp.</strong> – Dental Assistant (May 2024–Present): sterilization +20%, throughput +20%, video content +60%, wait times –30%.</p></div>
-      <div><h3>📁 Projects</h3><p><strong>Email Campaign & AI Tools:</strong> +22% open rate, +15% revenue; deployed AI/PM tools +35% efficiency.</p><p><strong>SEO Content:</strong> +35% engagement, +60% CTR via content calendar.</p></div>
+      <div class="resume-category">
+        <h3>🎓 Education</h3>
+        <div class="resume-item">
+          <strong>Pasadena City College</strong>
+          <em>Associate of Science in Business Administration</em>
+        </div>
+      </div>
+      <div class="resume-category">
+        <h3>💼 Work Experience</h3>
+        <div class="resume-item">
+          <strong>Parklane Dental</strong>
+          <em>Admin & Marketing Assistant | Apr 2025 – Present</em>
+          <ul>
+            <li>Streamlined workflows, increased team efficiency by 20%</li>
+            <li>Boosted social engagement +50% / +30%</li>
+            <li>Maintained HIPAA‑compliant client records</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <strong>Brian Y. Kuo DDS Corp.</strong>
+          <em>Dental Assistant | May 2024 – Present</em>
+          <ul>
+            <li>Improved sterilization +20%, throughput +20%</li>
+            <li>Produced video content boosting engagement +60%</li>
+            <li>Reduced patient wait times by 30%</li>
+          </ul>
+        </div>
+      </div>
+      <div class="resume-category">
+        <h3>📁 Projects</h3>
+        <div class="resume-item">
+          <strong>Email Campaign & AI Tools</strong>
+          <ul>
+            <li>Raised email open rate +22%, revenue +15%</li>
+            <li>Implemented AI/PM tools, increasing team efficiency +35%</li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <strong>SEO Content Strategy</strong>
+          <ul>
+            <li>Boosted engagement +35%, CTR +60% in 3 months</li>
+          </ul>
+        </div>
+      </div>
       <a href="assets/resume.pdf" download class="btn">Download Resume</a>
     </section>
 
