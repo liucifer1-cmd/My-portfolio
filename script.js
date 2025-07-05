@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // === Loader Fade-Out ===
+  // Loader (if using a loader element)
   const loader = document.getElementById("loader");
   window.addEventListener("load", () => {
     if (loader) {
@@ -8,23 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // === Theme Toggle ===
+  // Theme Toggle
   const themeToggle = document.getElementById("theme-toggle");
-  const saved = localStorage.getItem("theme") || "light";
-  document.body.dataset.theme = saved;
-  themeToggle.textContent = saved === "light" ? "🌙" : "☀️";
+  const savedTheme = localStorage.getItem("theme") || "light";
+  document.body.dataset.theme = savedTheme;
+  themeToggle.textContent = savedTheme === "light" ? "🌙" : "☀️";
+
   themeToggle.addEventListener("click", () => {
-    const next = document.body.dataset.theme === "light" ? "dark" : "light";
-    document.body.dataset.theme = next;
-    localStorage.setItem("theme", next);
-    themeToggle.textContent = next === "light" ? "🌙" : "☀️";
+    const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+    document.body.dataset.theme = nextTheme;
+    localStorage.setItem("theme", nextTheme);
+    themeToggle.textContent = nextTheme === "light" ? "🌙" : "☀️";
   });
 
-  // === Back to Top Button ===
+  // Back-to-top Button
   const backBtn = document.getElementById("back-to-top");
   window.addEventListener("scroll", () => {
     if (backBtn) {
-      backBtn.style.display = (window.scrollY > 300) ? "block" : "none";
+      backBtn.style.display = window.scrollY > 300 ? "block" : "none";
     }
   });
   if (backBtn) {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // === Typing Subtitle ===
+  // Typing Subtitle
   const subtitleEl = document.getElementById("typed-text");
   if (subtitleEl) {
     const text = "Helping dental practices grow with marketing, tech, and admin excellence.";
@@ -48,11 +49,11 @@ document.addEventListener("DOMContentLoaded", () => {
     type();
   }
 
-  // === GSAP Animations ===
+  // GSAP Animations
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.utils.toArray("section, .project-card, .skill-card, .resume-item").forEach(el => {
+    const elements = document.querySelectorAll("section, .project-card, .skill-card, .resume-item");
+    elements.forEach(el => {
       gsap.from(el, {
         opacity: 0,
         y: 50,
